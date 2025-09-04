@@ -20,15 +20,20 @@
 
   <div id="map"></div>
 
-  <section id="panel">
-    <div><strong>Estado:</strong> <span id="status">Listo</span></div>
-    <div><strong>Plus Code:</strong> <span id="pluscode">—</span> <button id="btn-copy">Copiar</button></div>
-    <div><strong>Destino sugerido:</strong> <span id="nearest">—</span></div>
-    <details>
-      <summary>Capas de rutas</summary>
-      <div id="routes-list"></div>
-    </details>
-  </section>
+ <section id="panel">
+  <div style="display:flex; gap:8px; flex-wrap:wrap">
+    <button id="btn-zoom-all">🔍 Zoom a todas</button>
+    <button id="btn-hide-all">🙈 Ocultar todas</button>
+    <button id="btn-show-all">👀 Mostrar todas</button>
+  </div>
+  <div><strong>Estado:</strong> <span id="status">Listo</span></div>
+  <div><strong>Plus Code:</strong> <span id="pluscode">—</span> <button id="btn-copy">Copiar</button></div>
+  <div><strong>Destino sugerido:</strong> <span id="nearest">—</span></div>
+  <details open>
+    <summary><strong>Capas de rutas</strong></summary>
+    <div id="routes-list"></div>
+  </details>
+</section>
 
   <footer>
     <small>Funciona offline después de la primera carga. Sube tus .geojson a <code>/routes_geojson</code>.</small>
