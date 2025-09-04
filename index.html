@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Primavera Offline</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script defer src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script defer src="https://unpkg.com/open-location-code@1.0.4/openlocationcode.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Primavera Offline</h1>
+    <button id="btn-locate">📍 Mi ubicación</button>
+    <button id="btn-lost">🆘 Estoy perdido</button>
+  </header>
+
+  <div id="map"></div>
+
+  <section id="panel">
+    <div><strong>Estado:</strong> <span id="status">Listo</span></div>
+    <div><strong>Plus Code:</strong> <span id="pluscode">—</span> <button id="btn-copy">Copiar</button></div>
+    <div><strong>Destino sugerido:</strong> <span id="nearest">—</span></div>
+    <details>
+      <summary>Capas de rutas</summary>
+      <div id="routes-list"></div>
+    </details>
+  </section>
+
+  <footer>
+    <small>Funciona offline después de la primera carga. Sube tus .geojson a <code>/routes_geojson</code>.</small>
+  </footer>
+
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./sw.js');
+    }
+  </script>
+</body>
+</html>
