@@ -1,4 +1,4 @@
-const CACHE_NAME = 'primavera-cache-v1';
+const CACHE_NAME = 'primavera-cache-v3';
 const PRECACHE = [
   './',
   './index.html',
