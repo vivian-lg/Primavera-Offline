@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx version="1.1" creator="Trailforks.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<name>Huevona Trailforks Trail</name>
+<link href="https://www.trailforks.com/">
+<text>Trailforks</text>
+</link>
+</metadata>
+<trk>
+<name>
+Huevona
+</name>
+<trkseg>
+<trkpt lat="20.62139" lon="-103.53996">
+<ele>1988.227</ele>
+<time>2022-06-22T11:59:40-07:00</time>
+</trkpt>
+<trkpt lat="20.62103" lon="-103.54015">
+<ele>1987.814</ele>
+<time>2022-06-22T11:59:41-07:00</time>
+</trkpt>
+<trkpt lat="20.62056" lon="-103.54055">
+<ele>1988.943</ele>
+<time>2022-06-22T11:59:42-07:00</time>
+</trkpt>
+<trkpt lat="20.62041" lon="-103.54071">
+<ele>1988.661</ele>
+<time>2022-06-22T11:59:43-07:00</time>
+</trkpt>
+<trkpt lat="20.62031" lon="-103.54089">
+<ele>1988.95</ele>
+<time>2022-06-22T11:59:44-07:00</time>
+</trkpt>
+<trkpt lat="20.61954" lon="-103.54143">
+<ele>1985.388</ele>
+<time>2022-06-22T11:59:45-07:00</time>
+</trkpt>
+<trkpt lat="20.61944" lon="-103.54158">
+<ele>1985.616</ele>
+<time>2022-06-22T11:59:46-07:00</time>
+</trkpt>
+<trkpt lat="20.61907" lon="-103.54247">
+<ele>1990.197</ele>
+<time>2022-06-22T11:59:47-07:00</time>
+</trkpt>
+<trkpt lat="20.61904" lon="-103.54261">
+<ele>1991.025</ele>
+<time>2022-06-22T11:59:48-07:00</time>
+</trkpt>
+<trkpt lat="20.61882" lon="-103.54276">
+<ele>1991.431</ele>
+<time>2022-06-22T11:59:49-07:00</time>
+</trkpt>
+<trkpt lat="20.61851" lon="-103.54314">
+<ele>1991.553</ele>
+<time>2022-06-22T11:59:50-07:00</time>
+</trkpt>
+<trkpt lat="20.61839" lon="-103.54326">
+<ele>1991.567</ele>
+<time>2022-06-22T11:59:51-07:00</time>
+</trkpt>
+<trkpt lat="20.61791" lon="-103.54357">
+<ele>1989.491</ele>
+<time>2022-06-22T11:59:52-07:00</time>
+</trkpt>
+<trkpt lat="20.61765" lon="-103.54363">
+<ele>1987.59</ele>
+<time>2022-06-22T11:59:53-07:00</time>
+</trkpt>
+<trkpt lat="20.61744" lon="-103.54363">
+<ele>1986.464</ele>
+<time>2022-06-22T11:59:54-07:00</time>
+</trkpt>
+<trkpt lat="20.6172" lon="-103.54355">
+<ele>1986.069</ele>
+<time>2022-06-22T11:59:55-07:00</time>
+</trkpt>
+<trkpt lat="20.61654" lon="-103.54306">
+<ele>1985.491</ele>
+<time>2022-06-22T11:59:56-07:00</time>
+</trkpt>
+<trkpt lat="20.61634" lon="-103.54301">
+<ele>1985.532</ele>
+<time>2022-06-22T11:59:57-07:00</time>
+</trkpt>
+<trkpt lat="20.61608" lon="-103.54289">
+<ele>1986.027</ele>
+<time>2022-06-22T11:59:58-07:00</time>
+</trkpt>
+<trkpt lat="20.61589" lon="-103.54276">
+<ele>1986.697</ele>
+<time>2022-06-22T11:59:59-07:00</time>
+</trkpt>
+<trkpt lat="20.61568" lon="-103.54268">
+<ele>1986.167</ele>
+<time>2022-06-22T12:00:00-07:00</time>
+</trkpt>
+<trkpt lat="20.61545" lon="-103.54266">
+<ele>1985.01</ele>
+<time>2022-06-22T12:00:01-07:00</time>
+</trkpt>
+<trkpt lat="20.6151" lon="-103.54256">
+<ele>1984.088</ele>
+<time>2022-06-22T12:00:02-07:00</time>
+</trkpt>
+<trkpt lat="20.61463" lon="-103.54234">
+<ele>1984.748</ele>
+<time>2022-06-22T12:00:03-07:00</time>
+</trkpt>
+<trkpt lat="20.61391" lon="-103.54198">
+<ele>1987.544</ele>
+<time>2022-06-22T12:00:04-07:00</time>
+</trkpt>
+<trkpt lat="20.6135" lon="-103.54169">
+<ele>1990.536</ele>
+<time>2022-06-22T12:00:05-07:00</time>
+</trkpt>
+<trkpt lat="20.61336" lon="-103.54153">
+<ele>1992.099</ele>
+<time>2022-06-22T12:00:06-07:00</time>
+</trkpt>
+<trkpt lat="20.61328" lon="-103.54107">
+<ele>1995.057</ele>
+<time>2022-06-22T12:00:07-07:00</time>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>
