@@ -1,0 +1,182 @@
+[
+  {
+    "name": "\n1/2 Mosca\n (inicio)",
+    "lat": 20.61511,
+    "lon": -103.53067,
+    "type": "salida"
+  },
+  {
+    "name": "\n1/2 Mosca\n (fin)",
+    "lat": 20.62146,
+    "lon": -103.53394,
+    "type": "salida"
+  },
+  {
+    "name": "Ruta la catarina  (inicio)",
+    "lat": 20.61614,
+    "lon": -103.4873,
+    "type": "salida"
+  },
+  {
+    "name": "Ruta la catarina  (fin)",
+    "lat": 20.616390000000003,
+    "lon": -103.48667,
+    "type": "salida"
+  },
+  {
+    "name": "\nArenosas\n (inicio)",
+    "lat": 20.61705,
+    "lon": -103.50878,
+    "type": "salida"
+  },
+  {
+    "name": "\nArenosas\n (fin)",
+    "lat": 20.6134,
+    "lon": -103.49144,
+    "type": "salida"
+  },
+  {
+    "name": "\nBosque Nutella\n (inicio)",
+    "lat": 20.60612,
+    "lon": -103.58088,
+    "type": "salida"
+  },
+  {
+    "name": "\nBosque Nutella\n (fin)",
+    "lat": 20.61347,
+    "lon": -103.56433,
+    "type": "salida"
+  },
+  {
+    "name": "\nBy Pass\n (inicio)",
+    "lat": 20.61264,
+    "lon": -103.5403,
+    "type": "salida"
+  },
+  {
+    "name": "\nBy Pass\n (fin)",
+    "lat": 20.60733,
+    "lon": -103.53842,
+    "type": "salida"
+  },
+  {
+    "name": "\nEspinazo\n (inicio)",
+    "lat": 20.59607,
+    "lon": -103.54286,
+    "type": "salida"
+  },
+  {
+    "name": "\nEspinazo\n (fin)",
+    "lat": 20.604,
+    "lon": -103.53493,
+    "type": "salida"
+  },
+  {
+    "name": "\nExtensión Espinazo\n (inicio)",
+    "lat": 20.604,
+    "lon": -103.53493,
+    "type": "salida"
+  },
+  {
+    "name": "\nExtensión Espinazo\n (fin)",
+    "lat": 20.6104,
+    "lon": -103.53004,
+    "type": "salida"
+  },
+  {
+    "name": "\nHuevona\n (inicio)",
+    "lat": 20.62139,
+    "lon": -103.53996,
+    "type": "salida"
+  },
+  {
+    "name": "\nHuevona\n (fin)",
+    "lat": 20.61328,
+    "lon": -103.54107,
+    "type": "salida"
+  },
+  {
+    "name": "\nMago de Oz\n (inicio)",
+    "lat": 20.58755,
+    "lon": -103.53328,
+    "type": "salida"
+  },
+  {
+    "name": "\nMago de Oz\n (fin)",
+    "lat": 20.56546,
+    "lon": -103.52172,
+    "type": "salida"
+  },
+  {
+    "name": "\nPinitos (Angel)\n (inicio)",
+    "lat": 20.61328,
+    "lon": -103.54107,
+    "type": "salida"
+  },
+  {
+    "name": "\nPinitos (Angel)\n (fin)",
+    "lat": 20.60387,
+    "lon": -103.53525,
+    "type": "salida"
+  },
+  {
+    "name": "relax (inicio)",
+    "lat": 20.61739,
+    "lon": -103.50935000000001,
+    "type": "salida"
+  },
+  {
+    "name": "relax (fin)",
+    "lat": 20.61726,
+    "lon": -103.50912000000001,
+    "type": "salida"
+  },
+  {
+    "name": "\nToboganes\n (inicio)",
+    "lat": 20.62282,
+    "lon": -103.54219,
+    "type": "salida"
+  },
+  {
+    "name": "\nToboganes\n (fin)",
+    "lat": 20.62317,
+    "lon": -103.56183,
+    "type": "salida"
+  },
+  {
+    "name": "\nTorre 01\n (inicio)",
+    "lat": 20.614567,
+    "lon": -103.490808,
+    "type": "salida"
+  },
+  {
+    "name": "\nTorre 01\n (fin)",
+    "lat": 20.595171,
+    "lon": -103.544976,
+    "type": "salida"
+  },
+  {
+    "name": "\nTorre 03\n (inicio)",
+    "lat": 20.61264,
+    "lon": -103.59977,
+    "type": "salida"
+  },
+  {
+    "name": "\nTorre 03\n (fin)",
+    "lat": 20.60362,
+    "lon": -103.60208,
+    "type": "salida"
+  },
+  {
+    "name": "\nVaca Muerta (Rivers Combined)\n (inicio)",
+    "lat": 20.60874,
+    "lon": -103.53018,
+    "type": "salida"
+  },
+  {
+    "name": "\nVaca Muerta (Rivers Combined)\n (fin)",
+    "lat": 20.61124,
+    "lon": -103.51515,
+    "type": "salida"
+  }
+]

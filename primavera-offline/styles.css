@@ -1,0 +1,11 @@
+html, body {height:100%; margin:0; font-family: system-ui, sans-serif;}
+header, footer {padding: 8px 12px; background:#111; color:#fff; display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+header h1 {font-size:1.1rem; margin:0 8px 0 0;}
+header button {padding:6px 10px; border:0; border-radius:10px; cursor:pointer;}
+#map {height: 65vh; background:#f5f5f5;}
+#panel {padding: 10px 12px; display:grid; gap:6px;}
+#routes-list label {display:block; margin: 4px 0;}
+footer {justify-content: center;}
+@media (min-width:900px) {
+  #map {height: 70vh;}
+}

@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<gpx version="1.1" creator="Trailforks.com" xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd">
+<metadata>
+<name>Vaca Muerta (Rivers Combined) Trailforks Trail</name>
+<link href="https://www.trailforks.com/">
+<text>Trailforks</text>
+</link>
+</metadata>
+<trk>
+<name>
+Vaca Muerta (Rivers Combined)
+</name>
+<trkseg>
+<trkpt lat="20.60874" lon="-103.53018">
+<ele>2010</ele>
+<time>2022-06-21T11:17:10-07:00</time>
+</trkpt>
+<trkpt lat="20.60845" lon="-103.53022">
+<ele>2010</ele>
+<time>2022-06-21T11:17:11-07:00</time>
+</trkpt>
+<trkpt lat="20.60823" lon="-103.53052">
+<ele>2012</ele>
+<time>2022-06-21T11:17:12-07:00</time>
+</trkpt>
+<trkpt lat="20.60776" lon="-103.53086">
+<ele>2015</ele>
+<time>2022-06-21T11:17:13-07:00</time>
+</trkpt>
+<trkpt lat="20.60758" lon="-103.53052">
+<ele>2013</ele>
+<time>2022-06-21T11:17:14-07:00</time>
+</trkpt>
+<trkpt lat="20.60773" lon="-103.53019">
+<ele>2011</ele>
+<time>2022-06-21T11:17:15-07:00</time>
+</trkpt>
+<trkpt lat="20.60774" lon="-103.53005">
+<ele>2011</ele>
+<time>2022-06-21T11:17:16-07:00</time>
+</trkpt>
+<trkpt lat="20.60775" lon="-103.53001">
+<ele>2011</ele>
+<time>2022-06-21T11:17:17-07:00</time>
+</trkpt>
+<trkpt lat="20.60785" lon="-103.52989">
+<ele>2009</ele>
+<time>2022-06-21T11:17:18-07:00</time>
+</trkpt>
+<trkpt lat="20.60792" lon="-103.52973">
+<ele>2009</ele>
+<time>2022-06-21T11:17:19-07:00</time>
+</trkpt>
+<trkpt lat="20.608" lon="-103.52963">
+<ele>2008</ele>
+<time>2022-06-21T11:17:20-07:00</time>
+</trkpt>
+<trkpt lat="20.60817" lon="-103.52947">
+<ele>2009</ele>
+<time>2022-06-21T11:17:21-07:00</time>
+</trkpt>
+<trkpt lat="20.60821" lon="-103.5294">
+<ele>2007</ele>
+<time>2022-06-21T11:17:22-07:00</time>
+</trkpt>
+<trkpt lat="20.6082" lon="-103.52902">
+<ele>2005</ele>
+<time>2022-06-21T11:17:23-07:00</time>
+</trkpt>
+<trkpt lat="20.60816" lon="-103.52861">
+<ele>2000</ele>
+<time>2022-06-21T11:17:24-07:00</time>
+</trkpt>
+<trkpt lat="20.60817" lon="-103.5283">
+<ele>1999</ele>
+<time>2022-06-21T11:17:25-07:00</time>
+</trkpt>
+<trkpt lat="20.6082" lon="-103.52815">
+<ele>1999</ele>
+<time>2022-06-21T11:17:26-07:00</time>
+</trkpt>
+<trkpt lat="20.60826" lon="-103.528">
+<ele>1998</ele>
+<time>2022-06-21T11:17:27-07:00</time>
+</trkpt>
+<trkpt lat="20.60845" lon="-103.52763">
+<ele>1998</ele>
+<time>2022-06-21T11:17:28-07:00</time>
+</trkpt>
+<trkpt lat="20.6085" lon="-103.52746">
+<ele>1996</ele>
+<time>2022-06-21T11:17:29-07:00</time>
+</trkpt>
+<trkpt lat="20.60855" lon="-103.52718">
+<ele>1995</ele>
+<time>2022-06-21T11:17:30-07:00</time>
+</trkpt>
+<trkpt lat="20.60847" lon="-103.52673">
+<ele>1995</ele>
+<time>2022-06-21T11:17:31-07:00</time>
+</trkpt>
+<trkpt lat="20.60841" lon="-103.52649">
+<ele>1994</ele>
+<time>2022-06-21T11:17:32-07:00</time>
+</trkpt>
+<trkpt lat="20.60829" lon="-103.52618">
+<ele>1988</ele>
+<time>2022-06-21T11:17:33-07:00</time>
+</trkpt>
+<trkpt lat="20.60826" lon="-103.52603">
+<ele>1987</ele>
+<time>2022-06-21T11:17:34-07:00</time>
+</trkpt>
+<trkpt lat="20.60827" lon="-103.52585">
+<ele>1987</ele>
+<time>2022-06-21T11:17:35-07:00</time>
+</trkpt>
+<trkpt lat="20.60831" lon="-103.52569">
+<ele>1985</ele>
+<time>2022-06-21T11:17:36-07:00</time>
+</trkpt>
+<trkpt lat="20.60842" lon="-103.52549">
+<ele>1980</ele>
+<time>2022-06-21T11:17:37-07:00</time>
+</trkpt>
+<trkpt lat="20.6088" lon="-103.52524">
+<ele>1980</ele>
+<time>2022-06-21T11:17:38-07:00</time>
+</trkpt>
+<trkpt lat="20.60884" lon="-103.52516">
+<ele>1980</ele>
+<time>2022-06-21T11:17:39-07:00</time>
+</trkpt>
+<trkpt lat="20.60884" lon="-103.52506">
+<ele>1980</ele>
+<time>2022-06-21T11:17:40-07:00</time>
+</trkpt>
+<trkpt lat="20.6088" lon="-103.52497">
+<ele>1979</ele>
+<time>2022-06-21T11:17:41-07:00</time>
+</trkpt>
+<trkpt lat="20.60875" lon="-103.5247">
+<ele>1978</ele>
+<time>2022-06-21T11:17:42-07:00</time>
+</trkpt>
+<trkpt lat="20.60878" lon="-103.52459">
+<ele>1978</ele>
+<time>2022-06-21T11:17:43-07:00</time>
+</trkpt>
+<trkpt lat="20.60875" lon="-103.5243">
+<ele>1977</ele>
+<time>2022-06-21T11:17:44-07:00</time>
+</trkpt>
+<trkpt lat="20.60863" lon="-103.52405">
+<ele>1977</ele>
+<time>2022-06-21T11:17:45-07:00</time>
+</trkpt>
+<trkpt lat="20.60862" lon="-103.52381">
+<ele>1975</ele>
+<time>2022-06-21T11:17:46-07:00</time>
+</trkpt>
+<trkpt lat="20.60867" lon="-103.5235">
+<ele>1972</ele>
+<time>2022-06-21T11:17:47-07:00</time>
+</trkpt>
+<trkpt lat="20.60871" lon="-103.52345">
+<ele>1972</ele>
+<time>2022-06-21T11:17:48-07:00</time>
+</trkpt>
+<trkpt lat="20.6088" lon="-103.52316">
+<ele>1969</ele>
+<time>2022-06-21T11:17:49-07:00</time>
+</trkpt>
+<trkpt lat="20.60891" lon="-103.52296">
+<ele>1969</ele>
+<time>2022-06-21T11:17:50-07:00</time>
+</trkpt>
+<trkpt lat="20.60918" lon="-103.52281">
+<ele>1973</ele>
+<time>2022-06-21T11:17:51-07:00</time>
+</trkpt>
+<trkpt lat="20.60923" lon="-103.52268">
+<ele>1970</ele>
+<time>2022-06-21T11:17:52-07:00</time>
+</trkpt>
+<trkpt lat="20.60921" lon="-103.52241">
+<ele>1968</ele>
+<time>2022-06-21T11:17:53-07:00</time>
+</trkpt>
+<trkpt lat="20.60926" lon="-103.52226">
+<ele>1968</ele>
+<time>2022-06-21T11:17:54-07:00</time>
+</trkpt>
+<trkpt lat="20.60953" lon="-103.52199">
+<ele>1968</ele>
+<time>2022-06-21T11:17:55-07:00</time>
+</trkpt>
+<trkpt lat="20.60988" lon="-103.52185">
+<ele>1967</ele>
+<time>2022-06-21T11:17:56-07:00</time>
+</trkpt>
+<trkpt lat="20.61004" lon="-103.52171">
+<ele>1971</ele>
+<time>2022-06-21T11:17:57-07:00</time>
+</trkpt>
+<trkpt lat="20.6102" lon="-103.52145">
+<ele>1968</ele>
+<time>2022-06-21T11:17:58-07:00</time>
+</trkpt>
+<trkpt lat="20.6102" lon="-103.52127">
+<ele>1965</ele>
+<time>2022-06-21T11:17:59-07:00</time>
+</trkpt>
+<trkpt lat="20.61029" lon="-103.52096">
+<ele>1964</ele>
+<time>2022-06-21T11:18:00-07:00</time>
+</trkpt>
+<trkpt lat="20.6104" lon="-103.52094">
+<ele>1964</ele>
+<time>2022-06-21T11:18:01-07:00</time>
+</trkpt>
+<trkpt lat="20.61041" lon="-103.5208">
+<ele>1961</ele>
+<time>2022-06-21T11:18:02-07:00</time>
+</trkpt>
+<trkpt lat="20.61046" lon="-103.52067">
+<ele>1961</ele>
+<time>2022-06-21T11:18:03-07:00</time>
+</trkpt>
+<trkpt lat="20.61057" lon="-103.52048">
+<ele>1959</ele>
+<time>2022-06-21T11:18:04-07:00</time>
+</trkpt>
+<trkpt lat="20.61064" lon="-103.52032">
+<ele>1959</ele>
+<time>2022-06-21T11:18:05-07:00</time>
+</trkpt>
+<trkpt lat="20.61066" lon="-103.52011">
+<ele>1959</ele>
+<time>2022-06-21T11:18:06-07:00</time>
+</trkpt>
+<trkpt lat="20.61072" lon="-103.51984">
+<ele>1958</ele>
+<time>2022-06-21T11:18:07-07:00</time>
+</trkpt>
+<trkpt lat="20.61095" lon="-103.51937">
+<ele>1958</ele>
+<time>2022-06-21T11:18:08-07:00</time>
+</trkpt>
+<trkpt lat="20.61112" lon="-103.5191">
+<ele>1958</ele>
+<time>2022-06-21T11:18:09-07:00</time>
+</trkpt>
+<trkpt lat="20.61117" lon="-103.51893">
+<ele>1958</ele>
+<time>2022-06-21T11:18:10-07:00</time>
+</trkpt>
+<trkpt lat="20.61129" lon="-103.51883">
+<ele>1958</ele>
+<time>2022-06-21T11:18:11-07:00</time>
+</trkpt>
+<trkpt lat="20.61112" lon="-103.51847">
+<ele>1957</ele>
+<time>2022-06-21T11:18:12-07:00</time>
+</trkpt>
+<trkpt lat="20.61125" lon="-103.51806">
+<ele>1956</ele>
+<time>2022-06-21T11:18:13-07:00</time>
+</trkpt>
+<trkpt lat="20.61139" lon="-103.51789">
+<ele>1957</ele>
+<time>2022-06-21T11:18:14-07:00</time>
+</trkpt>
+<trkpt lat="20.61147" lon="-103.51771">
+<ele>1955</ele>
+<time>2022-06-21T11:18:15-07:00</time>
+</trkpt>
+<trkpt lat="20.61151" lon="-103.51754">
+<ele>1955</ele>
+<time>2022-06-21T11:18:16-07:00</time>
+</trkpt>
+<trkpt lat="20.61158" lon="-103.51747">
+<ele>1953</ele>
+<time>2022-06-21T11:18:17-07:00</time>
+</trkpt>
+<trkpt lat="20.6117" lon="-103.51742">
+<ele>1955</ele>
+<time>2022-06-21T11:18:18-07:00</time>
+</trkpt>
+<trkpt lat="20.61178" lon="-103.51695">
+<ele>1952</ele>
+<time>2022-06-21T11:18:19-07:00</time>
+</trkpt>
+<trkpt lat="20.61169" lon="-103.51659">
+<ele>1949</ele>
+<time>2022-06-21T11:18:20-07:00</time>
+</trkpt>
+<trkpt lat="20.61164" lon="-103.51649">
+<ele>1948</ele>
+<time>2022-06-21T11:18:21-07:00</time>
+</trkpt>
+<trkpt lat="20.61155" lon="-103.51643">
+<ele>1948</ele>
+<time>2022-06-21T11:18:22-07:00</time>
+</trkpt>
+<trkpt lat="20.6114" lon="-103.51628">
+<ele>1946</ele>
+<time>2022-06-21T11:18:23-07:00</time>
+</trkpt>
+<trkpt lat="20.61137" lon="-103.51619">
+<ele>1946</ele>
+<time>2022-06-21T11:18:24-07:00</time>
+</trkpt>
+<trkpt lat="20.61139" lon="-103.51607">
+<ele>1943</ele>
+<time>2022-06-21T11:18:25-07:00</time>
+</trkpt>
+<trkpt lat="20.61137" lon="-103.51597">
+<ele>1942</ele>
+<time>2022-06-21T11:18:26-07:00</time>
+</trkpt>
+<trkpt lat="20.61122" lon="-103.51576">
+<ele>1939</ele>
+<time>2022-06-21T11:18:27-07:00</time>
+</trkpt>
+<trkpt lat="20.61121" lon="-103.5157">
+<ele>1939</ele>
+<time>2022-06-21T11:18:28-07:00</time>
+</trkpt>
+<trkpt lat="20.61125" lon="-103.51553">
+<ele>1939</ele>
+<time>2022-06-21T11:18:29-07:00</time>
+</trkpt>
+<trkpt lat="20.61124" lon="-103.51515">
+<ele>1938</ele>
+<time>2022-06-21T11:18:30-07:00</time>
+</trkpt>
+</trkseg>
+</trk>
+</gpx>
