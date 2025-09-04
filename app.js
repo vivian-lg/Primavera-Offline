@@ -84,11 +84,21 @@ function loadRoutes() {
           if (f && f.properties.name) displayName = f.properties.name;
         } catch(e){}
 
-        const color = randomColor();
+        // nombre bonito (si existe en properties.name)
+let displayName = file;
+try {
+  const f = geo.features?.find(ft => ft.properties?.name);
+  if (f && f.properties.name) displayName = f.properties.name;
+} catch(e){}
+
+// Elegimos color estable: prioriza el nombre de archivo, si no, el displayName
+const color = stableColorFor(file) || stableColorFor(displayName);
+
         const layer = L.geoJSON(geo, {
-          style: {weight: 3, color},
-          pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4, color})
-        }).addTo(routesLayerGroup);
+  style: {weight: 3, color},
+  pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4, color})
+}).addTo(routesLayerGroup);
+
 
         // bounds para zoom general
         try {
