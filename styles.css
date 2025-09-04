@@ -9,3 +9,7 @@ footer {justify-content: center;}
 @media (min-width:900px) {
   #map {height: 70vh;}
 }
+.route-item {display:flex; align-items:center; gap:8px; margin:6px 0;}
+.route-color {width:16px; height:4px; border-radius:4px; background:#999;}
+.route-name {flex:1;}
+
