@@ -19,6 +19,32 @@ const ROUTE_FILES = [
   "arenosas (1).geojson"
 ];
 
+// Colores fijos por ruta (opcional). Clave = nombre de archivo .geojson o properties.name
+// Ejemplo: ajusta los nombres a los tuyos y los colores a tu gusto.
+const ROUTE_COLORS = {
+  "huevona.geojson": "#e41a1c",
+  "bosque-nutella.geojson": "#377eb8",
+  "toboganes.geojson": "#4daf4a"
+};
+
+// Paleta para asignación determinista cuando no esté en ROUTE_COLORS (amigable daltonismo-ish)
+const PALETTE = ["#377eb8","#e41a1c","#4daf4a","#984ea3","#ff7f00","#a65628","#f781bf","#999999","#66c2a5","#fc8d62"];
+
+// Devuelve SIEMPRE el mismo color para un nombre dado
+function stableColorFor(name){
+  // 1) Si está definido explícito en ROUTE_COLORS
+  if (ROUTE_COLORS[name]) return ROUTE_COLORS[name];
+
+  // 2) Si no, calculamos un hash del nombre y elegimos de PALETTE
+  let h = 0;
+  for (let i=0; i<name.length; i++){
+    h = ((h<<5)-h) + name.charCodeAt(i);
+    h |= 0; // 32-bit
+  }
+  const idx = Math.abs(h) % PALETTE.length;
+  return PALETTE[idx];
+}
+
 let map, userMarker, destLine, routesLayerGroup = L.layerGroup();
 const statusEl = document.getElementById('status');
 const plusEl = document.getElementById('pluscode');
