@@ -13,3 +13,57 @@ footer {justify-content: center;}
 .route-color {width:16px; height:4px; border-radius:4px; background:#999;}
 .route-name {flex:1;}
 
+/* ==== Dark Theme Pack ==== */
+:root{
+  --bg:#0f1115;         /* fondo app */
+  --panel:#151922;      /* tarjetas/paneles */
+  --text:#e9edf1;       /* texto principal */
+  --muted:#92a0b3;      /* texto secundario */
+  --accent:#5cc8ff;     /* acentos (botones, foco) */
+  --btn:#1e2532;        /* botón normal */
+  --btn-hover:#2a3344;  /* botón hover */
+  --border:#222a38;     /* bordes suaves */
+}
+
+html,body{background:var(--bg); color:var(--text);}
+header, footer{
+  background:var(--panel);
+  border-bottom:1px solid var(--border);
+  display:flex; gap:8px; align-items:center; flex-wrap:wrap;
+}
+header{ padding:10px 12px;}
+footer{ padding:8px 12px; justify-content:center; }
+
+h1{ font-size:1.1rem; margin:0; }
+.small-subtitle{ opacity:.7; }
+
+#map{ height:65vh; border-bottom:1px solid var(--border); background:#0a0c10; }
+#panel{ padding:12px; display:grid; gap:10px; max-width:1100px; margin:0 auto; }
+
+button{
+  background:var(--btn); color:var(--text);
+  border:1px solid var(--border); border-radius:999px;
+  padding:8px 12px; cursor:pointer; transition:.15s;
+}
+button:hover{ background:var(--btn-hover); }
+button:focus{ outline:2px solid var(--accent); outline-offset:2px; }
+
+details summary{ cursor:pointer; padding:6px 0; color:var(--muted) }
+#status, small{ color:var(--muted); }
+
+.route-item{
+  display:flex; align-items:center; gap:10px; margin:8px 0;
+  padding:10px 12px; background:var(--panel);
+  border:1px solid var(--border); border-radius:12px;
+}
+.route-color{ width:18px; height:6px; border-radius:5px; background:#999; }
+.route-name{ flex:1; color:var(--text); }
+
+/* punto azul (marcador de usuario) */
+.leaflet-marker-icon.user-dot{ background:transparent; border:none; }
+.user-dot-inner{
+  width:14px; height:14px; border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 6px rgba(92,200,255,.18), 0 0 18px rgba(92,200,255,.35);
+}
+
