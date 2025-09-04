@@ -36,29 +36,108 @@ function initMap() {
   map.setView(INITIAL_CENTER, INITIAL_ZOOM);
 }
 
+function randomColor() {
+  // colores suaves visibles
+  const hues = [0, 30, 60, 120, 180, 210, 240, 270, 300];
+  const h = hues[Math.floor(Math.random()*hues.length)];
+  return `hsl(${h} 90% 45%)`;
+}
+
 function loadRoutes() {
   const list = document.getElementById('routes-list');
+  const allBounds = [];
+
   ROUTE_FILES.forEach(file => {
     fetch(`routes_geojson/${file}`)
       .then(r => r.json())
       .then(geo => {
+        // nombre bonito
+        let displayName = file;
+        try {
+          const f = geo.features?.find(ft => ft.properties?.name);
+          if (f && f.properties.name) displayName = f.properties.name;
+        } catch(e){}
+
+        const color = randomColor();
         const layer = L.geoJSON(geo, {
-          style: {weight: 3},
-          pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4})
+          style: {weight: 3, color},
+          pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4, color})
         }).addTo(routesLayerGroup);
 
+        // bounds para zoom general
+        try {
+          const b = layer.getBounds();
+          if (b.isValid()) allBounds.push(b);
+        } catch(e){}
+
+        // item UI
         const id = 'r_' + file.replace(/\W/g,'_');
-        const label = document.createElement('label');
-        label.innerHTML = `<input type="checkbox" id="${id}" checked> ${file}`;
-        list.appendChild(label);
-        document.getElementById(id).addEventListener('change', (e)=>{
-          if(e.target.checked){ routesLayerGroup.addLayer(layer); }
+        const wrap = document.createElement('div');
+        wrap.className = 'route-item';
+
+        const swatch = document.createElement('div');
+        swatch.className = 'route-color';
+        swatch.style.background = color;
+
+        const chk = document.createElement('input');
+        chk.type = 'checkbox';
+        chk.id = id;
+        chk.checked = true;
+
+        const nameEl = document.createElement('span');
+        nameEl.className = 'route-name';
+        nameEl.textContent = displayName;
+
+        const btnZoom = document.createElement('button');
+        btnZoom.textContent = '🔍';
+        btnZoom.title = 'Zoom a esta ruta';
+
+        wrap.append(swatch, chk, nameEl, btnZoom);
+        list.appendChild(wrap);
+
+        chk.addEventListener('change', (e)=>{
+          if (e.target.checked) { routesLayerGroup.addLayer(layer); }
           else { routesLayerGroup.removeLayer(layer); }
         });
+
+        btnZoom.addEventListener('click', ()=>{
+          try {
+            const b = layer.getBounds();
+            if (b.isValid()) map.fitBounds(b.pad(0.2));
+          } catch(e){}
+        });
       })
-      .catch(()=> setStatus(`No pude cargar ${file}`));
+      .catch(()=> setStatus(`No pude cargar ${file} (¿nombre o ruta mal?)`));
   });
+
+  // Botones globales
+  document.getElementById('btn-hide-all').onclick = ()=>{
+    routesLayerGroup.eachLayer(l => routesLayerGroup.removeLayer(l));
+    document.querySelectorAll('#routes-list input[type="checkbox"]').forEach(c => c.checked = false);
+  };
+  document.getElementById('btn-show-all').onclick = ()=>{
+    document.querySelectorAll('#routes-list input[type="checkbox"]').forEach(c => {
+      if (!c.checked) c.checked = true;
+    });
+    // forzar re-add: recarga simple
+    routesLayerGroup.clearLayers();
+    // recargar todo para asegurar visibilidad
+    list.innerHTML = '';
+    // pequeña recarga visual
+    setTimeout(()=>{ routesLayerGroup.clearLayers(); list.innerHTML=''; loadRoutes(); }, 0);
+  };
+  document.getElementById('btn-zoom-all').onclick = ()=>{
+    // espera un instante a que se carguen las capas y calcula bounds unidos
+    let union;
+    routesLayerGroup.eachLayer(l=>{
+      const b = l.getBounds?.();
+      if (b && b.isValid()) union = union ? union.extend(b) : L.latLngBounds(b.getSouthWest(), b.getNorthEast());
+    });
+    if (union && union.isValid()) map.fitBounds(union.pad(0.25));
+    else setStatus('No hay rutas visibles para ajustar el zoom');
+  };
 }
+
 
 function haversine(lat1, lon1, lat2, lon2){
   const R=6371000, toRad = x=>x*Math.PI/180;
