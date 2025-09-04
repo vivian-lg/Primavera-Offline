@@ -193,17 +193,29 @@ async function findNearest(lat, lon){
 
 function showUser(lat, lon){
   const here = [lat,lon];
+
+  // Ícono de “punto azul” visible
+  const icon = L.divIcon({
+    className: 'user-dot',
+    html: '<div class="user-dot-inner"></div>',
+    iconSize: [14,14],
+    iconAnchor: [7,7]
+  });
+
   if(!userMarker){
-    userMarker = L.marker(here).addTo(map);
+    userMarker = L.marker(here, { icon }).addTo(map);
   } else {
     userMarker.setLatLng(here);
   }
   map.setView(here, map.getZoom());
+
+  // Plus Code
   try{
     const code = OpenLocationCode.encode(lat,lon, 10);
     plusEl.textContent = code;
   }catch(e){}
 }
+
 
 function drawDestinationLine(fromLat, fromLon, toLat, toLon){
   const coords = [[fromLat, fromLon], [toLat,toLon]];
