@@ -19,31 +19,34 @@ const ROUTE_FILES = [
   "arenosas (1).geojson"
 ];
 
-// Colores fijos por ruta (opcional). Clave = nombre de archivo .geojson o properties.name
-// Ejemplo: ajusta los nombres a los tuyos y los colores a tu gusto.
+// Colores fijos por archivo .geojson (usa EXACTAMENTE estos nombres de archivo):
 const ROUTE_COLORS = {
-  "huevona.geojson": "#e41a1c",
-  "bosque-nutella.geojson": "#377eb8",
-  "toboganes.geojson": "#4daf4a"
+  "bosque-nutella (1).geojson": "#e41a1c",
+  "Ruta la catarina  (1).geojson": "#377eb8",
+  "huevona (1).geojson": "#4daf4a",
+  "by-pass-516314 (1).geojson": "#984ea3",
+  "vaca-muerta-rivers-combined (1).geojson": "#ff7f00",
+  "torre-03 (1).geojson": "#a65628",
+  "espinazo (1).geojson": "#f781bf",
+  "pinitos-angel (1).geojson": "#999999",
+  "1-2-mosca (1).geojson": "#66c2a5",
+  "relax (1).geojson": "#fc8d62",
+  "torre-01 (1).geojson": "#1b9e77",
+  "extension-espinazo (1).geojson": "#d95f02",
+  "toboganes-110689 (1).geojson": "#7570b3",
+  "mago-de-oz (1).geojson": "#e7298a",
+  "arenosas (1).geojson": "#66a61e"
 };
 
-// Paleta para asignación determinista cuando no esté en ROUTE_COLORS (amigable daltonismo-ish)
-const PALETTE = ["#377eb8","#e41a1c","#4daf4a","#984ea3","#ff7f00","#a65628","#f781bf","#999999","#66c2a5","#fc8d62"];
-
-// Devuelve SIEMPRE el mismo color para un nombre dado
+// Paleta de respaldo + función de color estable (por si agregas nuevas rutas):
+const PALETTE = ["#377eb8","#e41a1c","#4daf4a","#984ea3","#ff7f00","#a65628","#f781bf","#999999","#66c2a5","#fc8d62","#1b9e77","#d95f02","#7570b3","#e7298a","#66a61e"];
 function stableColorFor(name){
-  // 1) Si está definido explícito en ROUTE_COLORS
   if (ROUTE_COLORS[name]) return ROUTE_COLORS[name];
-
-  // 2) Si no, calculamos un hash del nombre y elegimos de PALETTE
   let h = 0;
-  for (let i=0; i<name.length; i++){
-    h = ((h<<5)-h) + name.charCodeAt(i);
-    h |= 0; // 32-bit
-  }
-  const idx = Math.abs(h) % PALETTE.length;
-  return PALETTE[idx];
+  for (let i=0; i<name.length; i++){ h=((h<<5)-h)+name.charCodeAt(i); h|=0; }
+  return PALETTE[Math.abs(h)%PALETTE.length];
 }
+
 
 let map, userMarker, destLine, routesLayerGroup = L.layerGroup();
 const statusEl = document.getElementById('status');
@@ -62,13 +65,6 @@ function initMap() {
   map.setView(INITIAL_CENTER, INITIAL_ZOOM);
 }
 
-function randomColor() {
-  // colores suaves visibles
-  const hues = [0, 30, 60, 120, 180, 210, 240, 270, 300];
-  const h = hues[Math.floor(Math.random()*hues.length)];
-  return `hsl(${h} 90% 45%)`;
-}
-
 function loadRoutes() {
   const list = document.getElementById('routes-list');
   const allBounds = [];
@@ -77,28 +73,21 @@ function loadRoutes() {
     fetch(`routes_geojson/${file}`)
       .then(r => r.json())
       .then(geo => {
-        // nombre bonito
+        // nombre bonito (si existe en properties.name)
         let displayName = file;
         try {
           const f = geo.features?.find(ft => ft.properties?.name);
           if (f && f.properties.name) displayName = f.properties.name;
         } catch(e){}
 
-        // nombre bonito (si existe en properties.name)
-let displayName = file;
-try {
-  const f = geo.features?.find(ft => ft.properties?.name);
-  if (f && f.properties.name) displayName = f.properties.name;
-} catch(e){}
+        // Color estable: prioriza el nombre de archivo y luego el displayName
+        const color = stableColorFor(file) || stableColorFor(displayName);
 
-// Elegimos color estable: prioriza el nombre de archivo, si no, el displayName
-const color = stableColorFor(file) || stableColorFor(displayName);
-
+        // Capa
         const layer = L.geoJSON(geo, {
-  style: {weight: 3, color},
-  pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4, color})
-}).addTo(routesLayerGroup);
-
+          style: {weight: 3, color},
+          pointToLayer: (feat, latlng) => L.circleMarker(latlng, {radius:4, color})
+        }).addTo(routesLayerGroup);
 
         // bounds para zoom general
         try {
@@ -106,7 +95,7 @@ const color = stableColorFor(file) || stableColorFor(displayName);
           if (b.isValid()) allBounds.push(b);
         } catch(e){}
 
-        // item UI
+        // UI de lista (checkbox + muestra de color + zoom)
         const id = 'r_' + file.replace(/\W/g,'_');
         const wrap = document.createElement('div');
         wrap.className = 'route-item';
@@ -155,15 +144,12 @@ const color = stableColorFor(file) || stableColorFor(displayName);
     document.querySelectorAll('#routes-list input[type="checkbox"]').forEach(c => {
       if (!c.checked) c.checked = true;
     });
-    // forzar re-add: recarga simple
+    // recargar rápido para asegurar visibilidad
     routesLayerGroup.clearLayers();
-    // recargar todo para asegurar visibilidad
     list.innerHTML = '';
-    // pequeña recarga visual
     setTimeout(()=>{ routesLayerGroup.clearLayers(); list.innerHTML=''; loadRoutes(); }, 0);
   };
   document.getElementById('btn-zoom-all').onclick = ()=>{
-    // espera un instante a que se carguen las capas y calcula bounds unidos
     let union;
     routesLayerGroup.eachLayer(l=>{
       const b = l.getBounds?.();
@@ -173,6 +159,7 @@ const color = stableColorFor(file) || stableColorFor(displayName);
     else setStatus('No hay rutas visibles para ajustar el zoom');
   };
 }
+
 
 
 function haversine(lat1, lon1, lat2, lon2){
